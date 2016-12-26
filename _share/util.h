@@ -1,6 +1,6 @@
 //
 //  util.h
-//
+//  Data Structure Algorithm
 //
 //  Created by BB8 on 16/12/23.
 //  Copyright © 2016年 BB8. All rights reserved.

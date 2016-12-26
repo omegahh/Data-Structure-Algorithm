@@ -1,9 +1,12 @@
 //
 //  fib1.cpp
+//  fibonacci
 //
 //  Created by BB8 on 16/12/24.
 //  Copyright © 2016年 BB8. All rights reserved.
 //
+
+
 //计算Fibonacci数列的第n项（二分递归版）：O(2^n)
 
 long long fib(int n) {
