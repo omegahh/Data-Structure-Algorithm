@@ -97,7 +97,7 @@ void testVector(int testSize) {
     printf("\n  ==== Test %2d. Sort degenerate intervals each of size 1 in\n", testID++, 0, V.size()); PRINT(V);
     for (int i = 0; i < V.size(); i += V.size() / 5) { V.sort(i, i); PRINT(V); } //element by element
     printf("\n  ==== Test %2d. Sort 5 intervals each of size %d in\n", testID++, V.size() / 5); PRINT(V);
-    for (int i = 0; i < V.size(); i += V.size() / 5) { V.sort(i, min(V.size(), V.size() / 5)); PRINT(V); } //interval by interval
+    for (int i = 0; i < V.size(); i += V.size() / 5) { V.sort(i, std::min(V.size(), V.size() / 5)); PRINT(V); } //interval by interval
     printf("\n  ==== Test %2d. Sort the entire vector of\n", testID++, V.size()); PRINT(V);
     V.sort(); PRINT(V);
     printf("\n  ==== Test %2d. FIND in\n", testID++); PRINT(V);
