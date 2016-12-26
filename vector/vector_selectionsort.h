@@ -12,7 +12,7 @@ template <typename T> //向量选择排序
 void Vector<T>::selectionSort ( Rank lo, Rank hi ) { //assert: 0 < lo <= hi <= size
     /*DSA*/printf ( "\tSELECTIONsort [%3d, %3d)\n", lo, hi );
     while ( lo < --hi )
-        swap ( _elem[max ( lo, hi ) ], _elem[hi] ); //将[hi]与[lo, hi]中的最大者交换
+        std::swap ( _elem[max ( lo, hi ) ], _elem[hi] ); //将[hi]与[lo, hi]中的最大者交换
 }
 
 template <typename T>

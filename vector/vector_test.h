@@ -13,6 +13,5 @@
 #include "../_share/util.h"
 #include "../uniprint/print.h"
 
-#include "vector.h"
-
 #include "permute.h"
+#include "vector.h"

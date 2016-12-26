@@ -46,7 +46,7 @@
 #include "vector_mergesort.h"
 #include "vector_partition_b.h" //有A、A1、B、B1、C共5个版本
 #include "vector_quicksort.h"
-#include "vector_heapsort.h"
+//#include "vector_heapsort.h"
 
 #include "vector_uniquify.h" //或者Vector_uniquify_slow.h
 #include "vector_deduplicate.h"

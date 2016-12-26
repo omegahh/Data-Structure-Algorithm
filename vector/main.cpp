@@ -94,11 +94,11 @@ void testVector(int testSize) {
     increase(V); PRINT(V);
     printf("\n  ==== Test %2d. FIND in\n", testID++); PRINT(V);
     testFind<T> (V, testSize);
-    printf("\n  ==== Test %2d. Sort degenerate intervals each of size 1 in\n", testID++, 0, V.size()); PRINT(V);
+    printf("\n  ==== Test %2d. Sort degenerate intervals each of size 1 in [%d, %d]\n", testID++, 0, V.size()); PRINT(V);
     for (int i = 0; i < V.size(); i += V.size() / 5) { V.sort(i, i); PRINT(V); } //element by element
     printf("\n  ==== Test %2d. Sort 5 intervals each of size %d in\n", testID++, V.size() / 5); PRINT(V);
     for (int i = 0; i < V.size(); i += V.size() / 5) { V.sort(i, std::min(V.size(), V.size() / 5)); PRINT(V); } //interval by interval
-    printf("\n  ==== Test %2d. Sort the entire vector of\n", testID++, V.size()); PRINT(V);
+    printf("\n  ==== Test %2d. Sort the entire vector of %d length.\n", testID++, V.size()); PRINT(V);
     V.sort(); PRINT(V);
     printf("\n  ==== Test %2d. FIND in\n", testID++); PRINT(V);
     testFind<T> (V, testSize);
@@ -121,7 +121,7 @@ void testVector(int testSize) {
     printf("%d node(s) removed\n", V.deduplicate()); PRINT(V);
     printf("\n  ==== Test %2d. Sort interval [%d, %d) in\n", testID++, 0, V.size()); PRINT(V);
     V.sort(); PRINT(V);
-    printf("\n  ==== Test %2d. FIND in V[%d]\n", testID++); PRINT(V);
+    printf("\n  ==== Test %2d. FIND in V[%d]\n", testID++, testSize); PRINT(V);
     testFind<T> (V, testSize);
     printf("\n  ==== Test %2d. SEARCH & INSERT in\n", testID++); PRINT(V);
     testOrderedInsertion<T> (V, testSize);  PRINT(V);
