@@ -14,6 +14,7 @@
  * 在 export 尚未被编译器支持前，如此可将定义与实现分离，以便课程讲解
  ******************************************************************************************/
 
+#include "print_basic.h"
 //#include "print_binnode.h"
 //#include "Print_bintree.h"
 //#include "Print_btree.h"

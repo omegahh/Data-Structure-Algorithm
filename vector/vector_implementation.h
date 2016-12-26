@@ -31,9 +31,10 @@
 
 #include "vector_disordered.h"
 #include "vector_find.h"
-#include "vector_search.h"
+
 #include "vector_search_binary_c.h" //有A、B、C三种版本，C最完善
 #include "vector_search_fibonaccian_b.h" //有A、B两种版本，B虽华丽，A更实用（但返回值有待与接口统一）
+#include "vector_search.h"
 
 #include "vector_traverse.h"
 

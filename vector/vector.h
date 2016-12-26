@@ -11,10 +11,10 @@
 typedef int Rank; //秩
 #define DEFAULT_CAPACITY 3 //默认的初始容量（实际应用中可设置为更大）
 
-template<typename T> class Vector { //向量模板类
+template <typename T> class Vector { //向量模板类
 protected:
-    Rank _size; int _capacity; T *_elem; //规模、容量、数据区
-    void copyFrom(T const *A, Rank lo, Rank hi); //复制数组区间A[lo, hi)
+    Rank _size; int _capacity; T * _elem; //规模、容量、数据区
+    void copyFrom(T const * A, Rank lo, Rank hi); //复制数组区间A[lo, hi)
     void expand(); //空间不足时扩容
     void shrink(); //装填因子过小时压缩
     bool bubble(Rank lo, Rank hi); //扫描交换
@@ -59,7 +59,7 @@ public:
     int deduplicate(); //无序去重
     int uniquify(); //有序去重
     // 遍历
-    void traverse(void (*) (T &)); //遍历（使用函数指针，只读或局部性修改）
+    void traverse(void (* ) (T &)); //遍历（使用函数指针，只读或局部性修改）
     template <typename VST> void traverse (VST &); //遍历（使用函数对象，可全局性修改）
 }; //Vector
 

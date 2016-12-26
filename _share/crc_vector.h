@@ -9,6 +9,7 @@
 #pragma once
 
 #include "../vector/vector.h"
+#include "../uniprint/print.h"
 
 template <typename T>
 void crc(Vector<T> & V) { //统计向量的特征（所有元素之和）
