@@ -10,6 +10,7 @@
 
 #include "../vector/vector.h"
 
+
 //判断向量是否整体有序
 template <typename T>
 void checkOrder(Vector<T> & V) {
