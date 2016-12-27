@@ -30,8 +30,8 @@
 //#include "../graphmatrix/graphmatrix.h" //基于邻接矩阵实现的图
 
 
-static int print(char * x) { printf(" %s", x ? x : "<NULL>"); return 0; } //字符串特别处理
-static int print(const char * x) { printf(" %s", x ? x : "<NULL>"); return 0; } //字符串特别处理
+static void print(char * x) { printf(" %s", x ? x : "<NULL>"); } //字符串特别处理
+static void print(const char * x) { printf(" %s", x ? x : "<NULL>"); } //字符串特别处理
 
 class UniPrint {
 public:
@@ -67,9 +67,9 @@ public:
 /******************************************************************************************
  * 数据元素、数据结构通用输出接口
  ******************************************************************************************/
-template <typename T> static int print(T * x) { x ? print(*x) : printf(" <NULL>"); return 0; }
-template <typename T> static int print(T & x) { UniPrint::p(x); return 0; }
-template <typename T> static int print(const T & x) { UniPrint::p(x); return 0; } //for Stack
+template <typename T> static void print(T * x) { x ? print(*x) : printf(" <NULL>"); }
+template <typename T> static void print(T & x) { UniPrint::p(x); }
+template <typename T> static void print(const T & x) { UniPrint::p(x); } //for Stack
 
 
 #include "print_implementation.h"

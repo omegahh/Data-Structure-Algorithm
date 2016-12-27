@@ -54,7 +54,7 @@ void testSearch(Vector<T> &V) {
         T e = (a + b) / 2; printf("Looking for"); print(e); printf(" in ...\n"); print(V);
         Rank r = V.search(e);
         printf("V[%3d] = ", r); (r < 0) ? print("-INF") : print(V[r]); printf(" ~ ");
-        printf("V[%3d] = ", r+1); ((r+1) < V.size()) ? print(V[r+1]) : printf("+INF");
+        printf("V[%3d] = ", r+1); if ((r+1) < V.size()) print(V[r+1]); else printf("+INF");
         bool ordered = true;
         if ((r >= 0) && (V[r] > e)) ordered = false;
         if ((r+1 < V.size()) && (V[r+1] <= e)) ordered = false;

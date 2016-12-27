@@ -11,6 +11,6 @@
 template<typename T> struct CheckOrder { //函数对象：判断一个T类对象是否局部有序
     T pred;
     int &u;
-    CheckOrder(int &unsorted, T &first) : pred(first), u(unsorted) {}
-    virtual void operator() (T & e) { if (pred > e) u++; pred = e; }
+    CheckOrder(int &unsorted, T &first) : u(unsorted), pred(first) {} //冒号表示成员变量的初始化
+    virtual void operator() (T & e) { if (pred > e) u++; pred = e; } //重载()操作符
 };

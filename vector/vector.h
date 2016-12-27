@@ -40,11 +40,10 @@ public:
     Rank size() const { return _size; } //规模
     bool empty() const { return !_size; } //判空
     int disordered() const; //判断向量是否已排序
-    Rank find(T const & e) const { return find(e, 0, _size); } //无序向量整体查找
     Rank find(T const & e, Rank lo, Rank hi) const; //无序向量区间查找
-    Rank search(T const & e) const //有序向量整体查找
-    { return(0 >= _size) ? -1 : search(e, 0, _size); }
+    Rank find(T const & e) const { return find(e, 0, _size); } //无序向量整体查找
     Rank search(T const & e, Rank lo, Rank hi) const; //有序向量区间查找
+    Rank search(T const & e) const { return (0 >= _size) ? -1 : search(e, 0, _size); } //有序向量整体查找
     // 可写访问接口
     T & operator[] (Rank r) const; //重载下标操作符，可以类似于数组形式引用各元素
     Vector<T> & operator= (Vector<T> const &); //重载赋值操作符，以便直接克隆向量
@@ -59,7 +58,7 @@ public:
     int deduplicate(); //无序去重
     int uniquify(); //有序去重
     // 遍历
-    void traverse(void (* ) (T &)); //遍历（使用函数指针，只读或局部性修改）
+    void traverse(void (*) (T &)); //遍历（使用函数指针，只读或局部性修改）
     template <typename VST> void traverse(VST &); //遍历（使用函数对象，可全局性修改）
 }; //Vector
 

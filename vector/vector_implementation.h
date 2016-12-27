@@ -27,7 +27,6 @@
 
 #include "vector_insert.h"
 #include "vector_remove.h"
-//#include "vector_remove_interval.h"
 
 #include "vector_disordered.h"
 #include "vector_find.h"
