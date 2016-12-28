@@ -71,5 +71,4 @@ template <typename T> static void print(T * x) { x ? print(*x) : printf(" <NULL>
 template <typename T> static void print(T & x) { UniPrint::p(x); }
 template <typename T> static void print(const T & x) { UniPrint::p(x); } //for Stack
 
-
 #include "print_implementation.h"

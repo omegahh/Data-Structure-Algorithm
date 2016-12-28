@@ -1,5 +1,5 @@
 //
-//  vector_constructor_by_copying.h
+//  vector_constructor.h
 //  Data Structure Algorithm
 //
 //  Created by BB8 on 16/12/23.

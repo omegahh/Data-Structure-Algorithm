@@ -13,7 +13,7 @@
  ******************************************************************************************/
 template <typename T> //元素类型
 void UniPrint::p(T & s) { //引用
-    printf("%s[%p]*%d:\n", typeid(s).name(), &s, s.size()); //基本信息
+    printf("\n%s[%d] -> %p:\n", typeid(s).name(), s.size(), &s); //基本信息
     s.traverse(print); //通过print()遍历输出所有元素
     printf("\n");
 }
