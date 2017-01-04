@@ -38,7 +38,7 @@ void testList(int testSize) {
     increase(La); PRINT(La);
     printf("\n==== Test %2d. Lowpass (with high complexity) on\n", testID++); PRINT(La);
     int i = La.size(); while (0 < --i) { La[i-1] += La[i]; La[i-1] >>= 1; } PRINT(La);
-    printf("\n==== Test %2d. reverse\n", testID++, testSize);
+    printf("\n==== Test %2d. reverse length %d\n", testID++, testSize);
     La.reverse(); PRINT(La);
     printf("\n==== Test %2d. Copy\n", testID++); PRINT(La);
     List<T> Ld(La); PRINT(Ld);
