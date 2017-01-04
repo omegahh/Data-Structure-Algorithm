@@ -23,17 +23,17 @@
 #include "comparator.h"
 
 #include "checkorder_elem.h"
-//#include "checkorder_list.h"
+#include "checkorder_list.h"
 #include "checkorder_vector.h"
 
 #include "double_elem.h"
 #include "increase_elem.h"
 #include "hailstone_elem.h"
-//#include "increase_list.h"
+#include "increase_list.h"
 #include "increase_vector.h"
 
 #include "crc_elem.h"
-//#include "crc_list.h"
+#include "crc_list.h"
 #include "crc_vector.h"
 
 #include "rand.h" // 随机数
