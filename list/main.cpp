@@ -62,8 +62,8 @@ void testList(int testSize) {
     La.sort(); PRINT(La);
     printf("\n==== Test %2d. SEARCH in\n", testID++); PRINT(La);
     for (int i = 0; i <= testSize * 2; i++) { //逐一测试[0, 2n]中的所有可能
-        ListNodePosi(T) p = La.search((T) i); printf("Looking for "); print((T) i); printf(": ");
-        printf(" stopped at"); print(p->data);
+        ListNodePosi(T) p = La.search((T) i); printf("Looking for"); print((T) i); printf(": ");
+        printf("stopped at"); print(p->data);
         if ((T) i == p->data) printf(" and found");
         printf("\n");
     } //正确的结构应该是大致（n+1次）失败、（n次）成功相间

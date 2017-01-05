@@ -16,7 +16,7 @@ struct ListNode {  //列表节点模版类（以双向链表形式实现）
     //成员
     T data; ListNodePosi(T) pred; ListNodePosi(T) succ;
     //构造函数
-    ListNode() {} //针对 header 和 trailer 的构造
+    ListNode() {} //针对 header 和 trailer 的构造，注意：Xcode 中认为未赋值的整型数据为 0。
     ListNode(T e, ListNodePosi(T) p = NULL, ListNodePosi(T) s = NULL) : data(e), pred(p), succ(s) {} //默认构造器
     //操作接口
     ListNodePosi(T) insertAsPred(T const & e); //紧靠当前节点之前插入新节点
