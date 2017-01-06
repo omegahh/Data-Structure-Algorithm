@@ -8,13 +8,8 @@
 
 #include<ctime>
 #include<iostream>
-//using namespace std;
 
 #include "fib.h"
-
-long long fibI(int n); //迭代版
-long long fib(int n); //二分递归版
-long long fib(int n, long long & f); //线性递归版
 
 int main(int argc, char* argv[]) { //测试FIB
     // 检查参数
