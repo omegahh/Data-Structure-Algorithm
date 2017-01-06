@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_insert_h
+#define vector_insert_h
 
 template <typename T> //将e作为秩为r元素插入
 Rank Vector<T>::insert(Rank r, T const & e) { //assert: 0 <= r <= size
@@ -15,3 +16,5 @@ Rank Vector<T>::insert(Rank r, T const & e) { //assert: 0 <= r <= size
     _elem[r] = e; _size++; //置入新元素并更新容量
     return r; //返回秩
 }
+
+#endif /* vector_insert_h */

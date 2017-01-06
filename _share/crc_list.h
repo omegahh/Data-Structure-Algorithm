@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef crc_list_h
+#define crc_list_h
 
 #include "../list/list.h"
 #include "../uniprint/print.h"
@@ -20,3 +21,5 @@ void crc(List<T> & L) { //统计列表的特征（所有元素总和）
     print(crc); //输出统计得到的特征
     printf("\n");
 }
+
+#endif /* crc_list_h */

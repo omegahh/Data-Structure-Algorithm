@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_test_h
+#define vector_test_h
 
 #include <iostream>
 
@@ -15,3 +16,5 @@
 
 #include "permute.h"
 #include "vector.h"
+
+#endif /* vector_test_h */

@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef list_initialize_h
+#define list_initialize_h
 
 template <typename T>
 void List<T>::init() { //列表初始化，在创建列表对象时统一调用
@@ -16,3 +17,5 @@ void List<T>::init() { //列表初始化，在创建列表对象时统一调用
     trailer->pred = header; trailer->succ = NULL;
     _size = 0; //记录规模
 }
+
+#endif /* list_initialize_h */

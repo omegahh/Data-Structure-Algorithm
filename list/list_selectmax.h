@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef list_selectmax_h
+#define list_selectmax_h
 
 template <typename T> //从起始于位置p的n个元素中选出最大者
 ListNodePosi(T) List<T>::selectMax(ListNodePosi(T) p, int n) {
@@ -16,3 +17,5 @@ ListNodePosi(T) List<T>::selectMax(ListNodePosi(T) p, int n) {
             max = cur; //更新最大元素位置记录
     return max; //返回最大节点位置
 }
+
+#endif /* list_selectmax_h */

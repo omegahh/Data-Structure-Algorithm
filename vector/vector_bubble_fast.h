@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_bubble_fast_h
+#define vector_bubble_fast_h
 
 template <typename T> Rank Vector<T>::bubble(Rank lo, Rank hi) { //一趟扫描交换
     Rank last = lo; //最右侧的逆序对初始化为[lo - 1, lo]
@@ -17,3 +18,5 @@ template <typename T> Rank Vector<T>::bubble(Rank lo, Rank hi) { //一趟扫描�
         }
     return last; //返回最右侧的逆序对位置
 }
+
+#endif /* vector_bubble_fast_h */

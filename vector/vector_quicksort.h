@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_quicksort_h
+#define vector_quicksort_h
 
 template <typename T> //向量快速排序
 void Vector<T>::quickSort(Rank lo, Rank hi) { //0 <= lo < hi <= size
@@ -16,3 +17,5 @@ void Vector<T>::quickSort(Rank lo, Rank hi) { //0 <= lo < hi <= size
     quickSort(lo, mi); //对前缀递归排序
     quickSort(mi + 1, hi); //对后缀递归排序
 }
+
+#endif /* vector_quicksort_h */

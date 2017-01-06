@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_merge_h
+#define vector_merge_h
 
 template <typename T> //有序向量的归并
 void Vector<T>::merge(Rank lo, Rank mi, Rank hi) { //各自有序的子向量[lo, mi)和[mi, hi)
@@ -20,3 +21,5 @@ void Vector<T>::merge(Rank lo, Rank mi, Rank hi) { //各自有序的子向量[lo
     }
     delete [] B; //释放临时空间B
 } //归并后得到完整的有序向量[lo, hi)
+
+#endif /* vector_merge_h */

@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_sort_h
+#define vector_sort_h
 
 template <typename T> void Vector<T>::sort(Rank lo, Rank hi) { //向量区间[lo, hi)排序
     switch (rand() % 5) { //随机选取排序算法。可根据具体问题的特点灵活选取或扩充
@@ -17,3 +18,5 @@ template <typename T> void Vector<T>::sort(Rank lo, Rank hi) { //向量区间[lo
         default: quickSort(lo, hi); break; //快速排序（稍后介绍）
     }
 }
+
+#endif /* vector_sort_h */

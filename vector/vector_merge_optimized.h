@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_merge_optimized_h
+#define vector_merge_optimized_h
 
 //原基本实现易于理解、可移植性强，但针对向量归并排序的情况，可优化如下
 for (Rank i = 0, j = 0, k = 0; j < lb;) { //将B[j]和C[k]中的小者续至A末尾
@@ -14,3 +15,5 @@ for (Rank i = 0, j = 0, k = 0; j < lb;) { //将B[j]和C[k]中的小者续至A末
         if ((lc <= k) || (B[j] <= C[k])) A[i++] = B[j++];
             }
 //交换循环体内两句的次序，删除冗余逻辑
+
+#endif /* vector_merge_optimized_h */

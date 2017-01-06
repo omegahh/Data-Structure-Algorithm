@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_search_binary_b_h
+#define vector_search_binary_b_h
 
 // 二分查找算法（版本B）：在有序向量的区间[lo, hi)内查找元素e，0 <= lo <= hi <= _size
 template <typename T> static Rank binSearch(T * A, T const & e, Rank lo, Rank hi) {
@@ -20,3 +21,5 @@ template <typename T> static Rank binSearch(T * A, T const & e, Rank lo, Rank hi
     for (int i = 0; i < lo; i++) printf("     "); if (lo >= 0) printf("....|\n"); else printf("<<<<|\n");
     return (e == A[lo]) ? lo : -1 ; //查找成功时返回对应的秩；否则统一返回-1
 } //有多个命中元素时，不能保证返回秩最大者；查找失败时，简单地返回-1，而不能指示失败的位置
+
+#endif /* vector_search_binary_b_h */

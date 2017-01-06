@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef list_uniquify_h
+#define list_uniquify_h
 
 template <typename T> int List<T>::uniquify() { //成批剔除重复元素，效率更高
     if (_size < 2) return 0; //平凡列表自然无重复
@@ -17,3 +18,5 @@ template <typename T> int List<T>::uniquify() { //成批剔除重复元素，效
         else remove(q); //否则（雷同），删除后者
     return oldSize - _size; //列表规模变化量，即被删除元素总数
 }
+
+#endif /* list_uniquify_h */

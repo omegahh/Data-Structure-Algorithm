@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_remove_h
+#define vector_remove_h
 
 template <typename T> int Vector<T>::remove(Rank lo, Rank hi) { //删除区间[lo, hi)
     if (lo == hi) return 0; //出于效率考虑，单独处理退化情况，比如remove(0, 0)
@@ -21,3 +22,5 @@ template <typename T> T Vector<T>::remove(Rank r) { //删除向量中秩为r的�
     remove(r, r + 1); //调用区间删除算法，等效于对区间[r, r + 1)的删除
     return e; //返回被删除元素
 }
+
+#endif /* vector_remove_h */

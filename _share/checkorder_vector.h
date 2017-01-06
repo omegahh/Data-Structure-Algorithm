@@ -6,10 +6,10 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef checkorder_vector_h
+#define checkorder_vector_h
 
 #include "../vector/vector.h"
-
 
 //判断向量是否整体有序
 template <typename T>
@@ -22,3 +22,5 @@ void checkOrder(Vector<T> & V) {
     else
         printf ("Sorted\n");
 }
+
+#endif /* checkorder_vector_h */

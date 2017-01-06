@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_partition_b1_h
+#define vector_partition_b1_h
 
 template <typename T> //轴点构造算法：通过调整元素位置构造区间[lo, hi]的轴点，并返回其秩
 Rank Vector<T>::partition(Rank lo, Rank hi) { //版本B1：版本B的等价形式，可直接转至与版本A等价的版本A1
@@ -23,3 +24,5 @@ Rank Vector<T>::partition(Rank lo, Rank hi) { //版本B1：版本B的等价形�
     _elem[lo] = pivot; //将备份的轴点记录置于前、后子向量之间
     return lo; //返回轴点的秩
 }
+
+#endif /* vector_partition_b1_h */

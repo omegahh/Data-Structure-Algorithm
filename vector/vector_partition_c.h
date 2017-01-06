@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_partition_c_h
+#define vector_partition_c_h
 
 template <typename T> //轴点构造算法：通过调整元素位置构造区间[lo, hi]的轴点，并返回其秩
 Rank Vector<T>::partition(Rank lo, Rank hi) { //版本C
@@ -31,3 +32,5 @@ Rank Vector<T>::partition(Rank lo, Rank hi) { //版本C
     std::swap(_elem[lo], _elem[mi]); //候选轴点归位
     return mi; //返回轴点的秩
 }
+
+#endif /* vector_partition_c_h */

@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef listnode_h
+#define listnode_h
 
 typedef int Rank;
 #define ListNodePosi(T) ListNode<T> * //列表节点位置
@@ -24,3 +25,5 @@ struct ListNode {  //列表节点模版类（以双向链表形式实现）
 };
 
 #include "listnode_implementation.h"
+
+#endif /* listnode_h */

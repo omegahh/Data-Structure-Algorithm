@@ -6,13 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
-
-/******************************************************************************************
- * 将vector各方法的实现部分，简洁地引入vector.h
- * 效果等同于将这些实现直接汇入vector.h
- * 在export尚未被编译器支持前，如此可将定义与实现分离，以便课程讲解
- ******************************************************************************************/
+#ifndef vector_implementation_h
+#define vector_implementation_h
 
 #include "../_share/release.h"
 #include "../_share/util.h"
@@ -50,3 +45,5 @@
 
 #include "vector_uniquify.h" //或者Vector_uniquify_slow.h
 #include "vector_deduplicate.h"
+
+#endif /* vector_implementation_h */

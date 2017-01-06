@@ -6,13 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
-
-/******************************************************************************************
- * 将 Print 各方法的实现部分，简洁地引入 print.h
- * 效果等同于将这些实现直接汇入 print.h
- * 在 export 尚未被编译器支持前，如此可将定义与实现分离，以便课程讲解
- ******************************************************************************************/
+#ifndef print_implementation_h
+#define print_implementation_h
 
 #include "print_basic.h"
 //#include "print_binnode.h"
@@ -28,3 +23,5 @@
 //#include "print_graphmatrix.h"
 
 #include "print_traversable.h"
+
+#endif /* print_implementation_h */

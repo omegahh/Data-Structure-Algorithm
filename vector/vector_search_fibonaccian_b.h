@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_search_fibonaccian_b_h
+#define vector_search_fibonaccian_b_h
 
 #include "../fibonacci/fib.h" //引入Fib数列类
 // Fibonacci查找算法（版本B）：在有序向量的区间[lo, hi)内查找元素e，0 <= lo <= hi <= _size
@@ -24,3 +25,5 @@ template<typename T> static Rank fibSearch(T * A, T const & e, Rank lo, Rank hi)
     if (lo > 0) printf("....|\n"); else printf("<<<<|\n");
     return --lo; //循环结束时，lo为大于e的元素的最小秩，故lo - 1即不大于e的元素的最大秩
 } //有多个命中元素时，总能保证返回最秩最大者；查找失败时，能够返回失败的位置
+
+#endif /* vector_search_fibonaccian_b_h */

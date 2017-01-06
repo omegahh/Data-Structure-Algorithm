@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef listnode_insertaspred_h
+#define listnode_insertaspred_h
 
 template <typename T> //将 e 紧靠当前节点之前插入于当前节点所属列表（设有哨兵头节点 header）
 ListNodePosi(T) ListNode<T>::insertAsPred(T const & e) {
@@ -14,3 +15,5 @@ ListNodePosi(T) ListNode<T>::insertAsPred(T const & e) {
     pred->succ = x; pred = x; //设置正向链接
     return x; //返回新节点位置
 }
+
+#endif /* listnode_insertaspred_h */

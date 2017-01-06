@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef list_disordered_h
+#define list_disordered_h
 
 #include "listnode.h"
 template <typename T> int List<T>::disordered() const { //统计逆序相邻元素对的总数
@@ -15,3 +16,5 @@ template <typename T> int List<T>::disordered() const { //统计逆序相邻元�
         if (p->data > p->succ->data) n++;
     return n;
 }
+
+#endif /* list_disordered_h */

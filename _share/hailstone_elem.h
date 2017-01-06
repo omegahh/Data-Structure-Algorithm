@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef hailstone_elem_h
+#define hailstone_elem_h
 
 template <typename T> struct Hailstone { //函数对象：按照Hailstone规则转化一个T类对象
     virtual void operator() (T & e) { //假设T可直接做算术运算
@@ -18,3 +19,5 @@ template <typename T> struct Hailstone { //函数对象：按照Hailstone规则�
         e = step; //返回转换所经步数
     }
 };
+
+#endif /* hailstone_elem_h */

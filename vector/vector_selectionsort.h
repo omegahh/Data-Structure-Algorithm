@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_selectionsort_h
+#define vector_selectionsort_h
 
 template <typename T> //向量选择排序
 void Vector<T>::selectionSort(Rank lo, Rank hi) { //assert: 0 < lo <= hi <= size
@@ -23,3 +24,5 @@ Rank Vector<T>::max(Rank lo, Rank hi) { //在[lo, hi]内找出最大者
             mx = hi; //故能在max有多个时保证后者优先，进而保证selectionSort稳定
     return mx;
 }
+
+#endif /* vector_selectionsort_h */

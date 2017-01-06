@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef release_h
+#define release_h
 
 #include <typeinfo>
 
@@ -41,3 +42,5 @@ template <typename T> struct Cleaner<T*> {
 };
 
 template <typename T> void release(T x) { Cleaner<T>::clean(x); }
+
+#endif /* release_h */

@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef list_h
+#define list_h
 
 #include "listnode.h" //引入列表节点类
 
@@ -67,3 +68,5 @@ public:
 }; //List
 
 #include "list_implementation.h"
+
+#endif /* list_h */

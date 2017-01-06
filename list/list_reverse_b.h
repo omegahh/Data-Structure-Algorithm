@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef list_reverse_b_h
+#define list_reverse_b_h
 
 template <typename T> void List<T>::reverse() { //前后倒置
     if (_size < 2) return; //平凡情况
@@ -14,3 +15,5 @@ template <typename T> void List<T>::reverse() { //前后倒置
         std::swap(p->pred, p->succ); //交换各节点的前驱、后继指针
     std::swap(header, trailer); //头、尾节点互换
 }
+
+#endif /* list_reverse_b_h */

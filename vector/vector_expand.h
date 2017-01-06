@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_expand_h
+#define vector_expand_h
 
 template <typename T> void Vector<T>::expand() { //向量空间不足时扩容
     if (_size < _capacity) return; //尚未满员时，不必扩容
@@ -16,3 +17,5 @@ template <typename T> void Vector<T>::expand() { //向量空间不足时扩容
         _elem[i] = oldElem[i]; //复制原向量内容（T为基本类型，或已重载赋值操作符'='）
     delete [] oldElem; //释放原空间
 }
+
+#endif /* vector_expand_h */

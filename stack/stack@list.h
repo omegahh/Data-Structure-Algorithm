@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef stack_list_h
+#define stack_list_h
 
 #include "../list/list.h" //以列表为基类，派生出栈模板类
 
@@ -16,3 +17,5 @@ public: //size()、empty()以及其它开放接口，均可直接沿用
     T pop() { return this->remove(this->last()); } //出栈：等效于删除列表的首元素
     T & top() { return this->last()->data; } //取顶：直接返回列表的首元素
 };
+
+#endif /* stack_list_h */

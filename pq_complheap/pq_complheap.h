@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef pq_complheap_h
+#define pq_complheap_h
 
 #include "../vector/vector.h" //借助多重继承机制，基于向量
 #include "../pq/pq.h" //按照优先级队列ADT实现的
@@ -28,3 +29,5 @@ T delMax(); //删除优先级最高的词条
 /*DSA*/#include "pq_complheap_macro.h"
 
 #include "pq_complheap_implementation.h"
+
+#endif /* pq_complheap_h */

@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef pq_complheap_macro_h
+#define pq_complheap_macro_h
 
 #define InHeap(n, i)      (((-1) < (i)) && ((i) < (n))) //判断PQ[i]是否合法
 #define Parent(i)         ((i- 1) >> 1)                 //PQ[i]的父节点（floor((i-1)/2)，i无论正负）
@@ -21,3 +22,5 @@
 (RChildValid(n, i) ? Bigger(PQ, Bigger(PQ, i, LChild(i)), RChild(i)) : \
 (LChildValid(n, i) ? Bigger(PQ, i, LChild(i)) : i) \
 ) //相等时父节点优先，如此可避免不必要的交换
+
+#endif /* pq_complheap_macro_h */

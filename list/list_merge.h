@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef list_merge_h
+#define list_merge_h
 
 template <typename T> //有序列表的归并：当前列表中自p起的n个元素，与列表L中自q起的m个元素归并
 void List<T>::merge(ListNodePosi(T) & p, int n, List<T> & L, ListNodePosi(T) q, int m) {
@@ -21,3 +22,5 @@ void List<T>::merge(ListNodePosi(T) & p, int n, List<T> & L, ListNodePosi(T) q, 
         { insertB(p, L.remove((q = q->succ)->pred)); m--; } //将q转移至p之前
     p = pp->succ; //确定归并后区间的（新）起点
 }
+
+#endif /* list_merge_h */

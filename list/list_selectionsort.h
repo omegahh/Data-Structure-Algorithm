@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef list_selectionsort_h
+#define list_selectionsort_h
 
 template <typename T> //列表的选择排序算法：对起始于位置p的n个元素排序
 void List<T>::selectionSort(ListNodePosi(T) p, int n) { //valid(p) && rank(p) + n <= size
@@ -19,3 +20,5 @@ void List<T>::selectionSort(ListNodePosi(T) p, int n) { //valid(p) && rank(p) + 
         tail = tail->pred; n--;
     }
 }
+
+#endif /* list_selectionsort_h */

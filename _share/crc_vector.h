@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef crc_vector_h
+#define crc_vector_h
 
 #include "../vector/vector.h"
 #include "../uniprint/print.h"
@@ -20,3 +21,5 @@ void crc(Vector<T> & V) { //统计向量的特征（所有元素之和）
     print(crc);
     printf("\n"); //输出统计得到的特征
 }
+
+#endif /* crc_vector_h */

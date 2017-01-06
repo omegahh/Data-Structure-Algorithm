@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef listnode_implementation_h
+#define listnode_implementation_h
 
 /******************************************************************************************
  * 将listNode各方法的实现部分，简洁地引入listNode.h
@@ -15,3 +16,5 @@
  ******************************************************************************************/
 #include "listnode_insertaspred.h"
 #include "listnode_insertassucc.h"
+
+#endif /* listnode_implementation_h */

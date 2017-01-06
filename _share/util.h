@@ -6,7 +6,9 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef util_h
+#define util_h
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
@@ -38,8 +40,12 @@
 
 #include "rand.h" // 随机数
 
+#endif /* util_h */
+
+/*
 #if defined(DSA_DEBUG) //编译开关，控制调试输出
 #define DSA(x) { x } //输出
 #else
 #define DSA(x) // 不输出
 #endif
+*/

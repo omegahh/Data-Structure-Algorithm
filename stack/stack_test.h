@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef stack_test_h
+#define stack_test_h
 
 #include <iostream>
 
@@ -14,3 +15,5 @@
 #include "../uniprint/print.h"
 
 #include "stack.h"
+
+#endif /* stack_test_h */

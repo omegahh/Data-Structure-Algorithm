@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef list_insertionsort_h
+#define list_insertionsort_h
 
 template <typename T> //列表的插入排序算法：对起始于位置p的n个元素排序
 void List<T>::insertionSort(ListNodePosi(T) p, int n) { //valid(p) && rank(p) + n <= size
@@ -16,3 +17,5 @@ void List<T>::insertionSort(ListNodePosi(T) p, int n) { //valid(p) && rank(p) + 
         p = p->succ; remove(p->pred); //转向下一节点
     }
 }
+
+#endif /* list_insertionsort_h */

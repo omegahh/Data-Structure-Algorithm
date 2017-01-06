@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_mergesort_h
+#define vector_mergesort_h
 
 template <typename T> //向量归并排序
 void Vector<T>::mergeSort(Rank lo, Rank hi) { //0 <= lo < hi <= size
@@ -16,3 +17,5 @@ void Vector<T>::mergeSort(Rank lo, Rank hi) { //0 <= lo < hi <= size
     mergeSort(lo, mi); mergeSort(mi, hi); //分别排序
     merge(lo, mi, hi); //归并
 }
+
+#endif /* vector_mergesort_h */

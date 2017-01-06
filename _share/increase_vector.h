@@ -6,13 +6,15 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef increase_vector_h
+#define increase_vector_h
 
 #include "../vector/vector.h"
-
 
 template <typename T>
 void increase(Vector<T> &V) { //统一递增向量中的各元素
     Increase<T> elem;
     V.traverse(elem); //以 Increase<T>() 为基本操作进行遍历
 }
+
+#endif /* increase_vector_h */

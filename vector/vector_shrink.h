@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_shrink_h
+#define vector_shrink_h
 
 template <typename T> void Vector<T>::shrink() { //装填因子过小时压缩向量所占空间
     if (_capacity < DEFAULT_CAPACITY << 1) return; //不致收缩到DEFAULT_CAPACITY以下
@@ -15,3 +16,5 @@ template <typename T> void Vector<T>::shrink() { //装填因子过小时压缩�
     for (int i = 0; i < _size; i++) _elem[i] = oldElem[i]; //复制原向量内容
     delete [] oldElem; //释放原空间
 }
+
+#endif /* vector_shrink_h */

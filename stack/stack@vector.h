@@ -6,9 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
-
-#include "../vector/vector.h" //以向量为基类，派生出栈模板类
+#ifndef stack_vector_h
+#define stack_vector_h
 
 template <typename T> class Stack : public Vector<T> { //将向量的首/末端作为栈底/顶
 public: //size()、empty()以及其它开放接口，均可直接沿用
@@ -17,8 +16,14 @@ public: //size()、empty()以及其它开放接口，均可直接沿用
     T & top() { return (*this)[this->size() - 1]; } //取顶：直接返回向量的末元素
 };
 
-// 注意：因为不像 VC++，Xcode 必须要加 this->
-// https://www.zhihu.com/question/28139230
-// 因为有偏特化，所以一个模板子类其实是不能在实例化之前就知道他的模板父类到底是谁，因此名字也无法resolve，所以只能this->了。
-// 不过VC++有个小扩展，允许你不使用this->就可以调用父类的名字，特别方便。由此可见，其实也是完全可以做到的。
-// http://stackoverflow.com/questions/10735611/use-of-undeclared-identifier-in-c-with-templates-and-inheritance
+#include "../vector/vector.h" //以向量为基类，派生出栈模板类
+
+/********************************************************************************
+ * 注意：因为不像 VC++，Xcode 必须要加 this->
+ * https://www.zhihu.com/question/28139230
+ * 因为有偏特化，所以一个模板子类其实是不能在实例化之前就知道他的模板父类到底是谁，因此名字也无法resolve，所以只能this->了。
+ * 不过VC++有个小扩展，允许你不使用this->就可以调用父类的名字，特别方便。由此可见，其实也是完全可以做到的。
+ * http://stackoverflow.com/questions/10735611/use-of-undeclared-identifier-in-c-with-templates-and-inheritance
+ ********************************************************************************/
+
+#endif /* stack_vector_h */

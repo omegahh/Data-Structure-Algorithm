@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef checkorder_list_h
+#define checkorder_list_h
 
 #include "../list/list.h"
 
@@ -20,3 +21,5 @@ template <typename T> void checkOrder(List<T> & L) { //判断列表是否整体�
         printf("Sorted\n");
     printf("DISORDERED = %d\n", L.disordered());
 }
+
+#endif /* checkorder_list_h */

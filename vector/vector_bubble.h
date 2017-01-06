@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_bubble_h
+#define vector_bubble_h
 
 template <typename T> bool Vector<T>::bubble(Rank lo, Rank hi) { //一趟扫描交换
     bool sorted = true; //整体有序标志
@@ -17,3 +18,5 @@ template <typename T> bool Vector<T>::bubble(Rank lo, Rank hi) { //一趟扫描�
         }
     return sorted; //返回有序标志
 }
+
+#endif /* vector_bubble_h */

@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_constructor_h
+#define vector_constructor_h
 
 template <typename T> //元素类型
 void Vector<T>::copyFrom (T const * A, Rank lo, Rank hi) { //以数组区间 A[lo,hi] 为蓝本复制向量
@@ -14,3 +15,5 @@ void Vector<T>::copyFrom (T const * A, Rank lo, Rank hi) { //以数组区间 A[l
     while (lo < hi) //A[lo,hi] 内的元素逐一
         _elem[_size++] = A[lo++]; //复制至 _elem[0,hi - lo)
 }
+
+#endif /* vector_constructor_h */

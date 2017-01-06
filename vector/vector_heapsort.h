@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_heapsort_h
+#define vector_heapsort_h
 
 template <typename T> void Vector<T>::heapSort(Rank lo, Rank hi) { //0 <= lo < hi <= size
     printf("\tHEAPsort [%3d, %3d)\n", lo, hi);
@@ -17,3 +18,5 @@ template <typename T> void Vector<T>::heapSort(Rank lo, Rank hi) { //0 <= lo < h
         for (int i = lo; i < hi; i++) print(H[i]); print(_elem[hi]); printf("\n");
     }
 }
+
+#endif /* vector_heapsort_h */

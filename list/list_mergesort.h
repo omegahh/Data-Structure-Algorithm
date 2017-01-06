@@ -6,7 +6,8 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef list_mergesort_h
+#define list_mergesort_h
 
 template <typename T> //列表的归并排序算法：对起始于位置p的n个元素排序
 void List<T>::mergeSort(ListNodePosi(T) & p, int n) { //valid(p) && rank(p) + n <= size
@@ -17,3 +18,5 @@ void List<T>::mergeSort(ListNodePosi(T) & p, int n) { //valid(p) && rank(p) + n 
     mergeSort(p, m); mergeSort(q, n - m); //对前、后子列表分别排序
     merge(p, m, *this, q, n - m); //归并
 } //注意：排序后，p依然指向归并后区间的（新）起点
+
+#endif /* list_mergesort_h */

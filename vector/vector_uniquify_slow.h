@@ -6,7 +6,8 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_uniquify_slow_h
+#define vector_uniquify_slow_h
 
 template <typename T> int Vector<T>::uniquify() { //有序向量重复元素剔除算法（低效版）
     int oldSize = _size; int i = 1; //当前比对元素的秩，起始于首元素
@@ -14,3 +15,5 @@ template <typename T> int Vector<T>::uniquify() { //有序向量重复元素剔�
         _elem[i-1] == _elem[i] ? remove(i) : i++; //若雷同，则删除后者；否则，转至后一元素
     return oldSize - _size; //向量规模变化量，即被删除元素总数
 }
+
+#endif /* vector_uniquify_slow_h */

@@ -6,13 +6,9 @@
 //  Copyright © 2017年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef list_implementation_h
+#define list_implementation_h
 
-/******************************************************************************************
- * 将List各方法的实现部分，简洁地引入list.h
- * 效果等同于将这些实现直接汇入list.h
- * 在export尚未被编译器支持前，如此可将定义与实现分离，以便课程讲解
- ******************************************************************************************/
 #include "../_share/release.h"
 #include "../_share/util.h"
 
@@ -47,3 +43,5 @@
 #include "list_uniquify.h"
 
 #include "list_reverse_a.h"
+
+#endif /* list_implementation_h */

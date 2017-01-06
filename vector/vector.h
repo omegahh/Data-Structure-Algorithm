@@ -6,10 +6,11 @@
 //  Copyright © 2016年 BB8. All rights reserved.
 //
 
-#pragma once
+#ifndef vector_h
+#define vector_h
 
-typedef int Rank; //秩
 #define DEFAULT_CAPACITY 3 //默认的初始容量（实际应用中可设置为更大）
+typedef int Rank; //秩
 
 template <typename T> class Vector { //向量模板类
 protected:
@@ -63,3 +64,5 @@ public:
 }; //Vector
 
 #include "vector_implementation.h"
+
+#endif /* vector_h */
