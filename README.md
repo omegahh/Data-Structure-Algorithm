@@ -5,5 +5,7 @@
 包含 Target
 
 - [x] 斐波那契数 fabonacci 算法的三种实现
-- [ ] 向量模版 vector 的实现
-- [ ] 列表
+- [x] 向量模版 vector 的实现
+- [x] 列表模版 list 的实现
+    - 列表实现在邓给的代码中，有序列表的 search，以及相关的 insertionSort 有问题，已修正
+- [ ] 栈与列表
