@@ -10,7 +10,7 @@
 
 template <typename T> //列表的归并排序算法：对起始于位置p的n个元素排序
 void List<T>::mergeSort(ListNodePosi(T) & p, int n) { //valid(p) && rank(p) + n <= size
-    printf("\tMERGEsort [%3d]\n", n);
+    printf("\tMERGEsort [%d]\n", n);
     if (n < 2) return; //若待排序范围已足够小，则直接返回；否则...
     int m = n >> 1; //以中点为界
     ListNodePosi(T) q = p; for (int i = 0; i < m; i++) q = q->succ; //均分列表
