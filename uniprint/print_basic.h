@@ -9,9 +9,9 @@
 #ifndef print_basic_h
 #define print_basic_h
 
-void UniPrint::p(int e) { printf(" %04d", e); }
-void UniPrint::p(float e) { printf(" %4.1f", e); }
-void UniPrint::p(double e) { printf(" %4.1f", e); }
-void UniPrint::p(char e) { printf(" %c", (31 < e) ? e : '$'); }
+inline void UniPrint::p(int e) { printf(" %04d", e); }
+inline void UniPrint::p(float e) { printf(" %4.1f", e); }
+inline void UniPrint::p(double e) { printf(" %4.1f", e); }
+inline void UniPrint::p(char e) { printf(" %c", (31 < e) ? e : '$'); }
 
 #endif /* print_basic_h */
