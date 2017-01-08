@@ -12,8 +12,8 @@
  * 检查表达式括号是否匹配
  ******************************************************************************************/
 int main(int argc, char* argv[]) {
-    // 检查参数
-    if (2 > argc) { //至少要提供一个待检查的字符串
+    // 检查参数，至少要提供一个待检查的字符串
+    if (2 > argc) {
         fprintf(stderr, "\nUsage: %s <string#1> <string#2> ... \n", argv[0]);
         fprintf(stderr, "For example %s (a[i-1][j+1])+a[i+1][j-1])*2\n", argv[0]);
         return -1;

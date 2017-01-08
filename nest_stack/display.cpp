@@ -26,5 +26,5 @@ void displayProgress(const char exp[], int i, Stack<char> S) {
     for (int j = 0; j < i; j++) printf("-");
     printf("^\n\n\n");
     // 栈
-    print(S);// getchar();
+    print(S);
 }
