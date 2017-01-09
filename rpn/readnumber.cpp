@@ -8,6 +8,7 @@
 
 #include "rpn.h"
 
+//char * & p 表示指向字符的指针，并且 & p 表示参数为引用传递
 void readNumber(char * & p, Stack<float> & stk) { //将起始于p的子串解析为数值，并存入操作数栈
     stk.push((float) (* p - '0')); //当前数位对应的数值进栈
     while (isdigit(* (++p))) //只要后续还有紧邻的数字（即多位整数的情况），则

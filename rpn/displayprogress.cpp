@@ -20,13 +20,13 @@ void printChar(char & p)
  ******************************************************************************************/
 void displayProgress(char * expr, char * pCh, Stack<float> & opndStk, Stack<char> & optrStk, char * rpn ) {
     printf ( "\n" );
-    for (char * p = expr; '\0' != *p; p++) printf(" %c", *p); printf(" $\n");
+    for (char * p = expr; '\0' != * p; p++) printf(" %c", * p); printf(" $\n");
     for (char * p = expr; p < pCh; p++) printf("  ");
     if ('\0' != * (pCh - 1))
     { for (char * p = pCh; '\0' != * p; p++) printf(" %c", * p); printf(" $"); }
     printf("\n");
-    for (char * p = expr; p < pCh; p++) printf("--"); printf(" ^\n\n");
-    print(optrStk); printf("\n");
+    for (char * p = expr; p < pCh; p++) printf("--"); printf(" ^\n");
+    print(optrStk);
     print(opndStk); printf("\n");
     printf("RPN:\n %s\n\n", rpn); //输出RPN
 }

@@ -9,7 +9,7 @@
 #include "rpn.h"
 
 float evaluate(char * S, char * & RPN) { //对（已剔除白空格的）表达式S求值，并转换为逆波兰式RPN
-    Stack<float> opnd; Stack<char> optr; //运算数栈、运算符栈 /*DSA*/任何时刻，其中每对相邻元素之间均大小一致
+    Stack<float> opnd; Stack<char> optr; //运算数栈、运算符栈，任何时刻，其中每对相邻元素之间均大小一致
     char * expr = S;
     optr.push('\0'); //尾哨兵'\0'也作为头哨兵首先入栈
     while (!optr.empty()) { //在运算符栈非空之前，逐个处理表达式中各字符
