@@ -1,5 +1,5 @@
 //
-//  print.h
+//  print_implementation.h
 //  Data Structure Algorithm
 //
 //  Created by BB8 on 16/12/23.
@@ -10,8 +10,8 @@
 #define print_implementation_h
 
 #include "print_basic.h"
-//#include "print_binnode.h"
-//#include "Print_bintree.h"
+#include "print_binnode.h"
+#include "Print_bintree.h"
 //#include "Print_btree.h"
 //#include "print_pq_list.h"
 //#include "print_pq_complheap.h"
