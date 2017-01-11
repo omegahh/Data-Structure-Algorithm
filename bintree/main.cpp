@@ -11,7 +11,7 @@
 int testID = 0; //测试编号
 
 // 随机生成期望高度为h的二叉树
-template<typename T> bool randomBinTree(BinTree<T> & bt, BinNodePosi(T) x, int h) {
+template <typename T> bool randomBinTree(BinTree<T> & bt, BinNodePosi(T) x, int h) {
     if (0 >= h) return false; //至多h层
     if (0 < dice(h)) //以1/h的概率终止当前分支的生长
         randomBinTree(bt, bt.insertAsLC(x, dice((T) h * h * h)), h - 1);
@@ -21,7 +21,7 @@ template<typename T> bool randomBinTree(BinTree<T> & bt, BinNodePosi(T) x, int h
 }
 
 // 在二叉树中随机确定一个节点位置
-template<typename T> BinNodePosi(T) randomPosiInBinTree(BinNodePosi(T) root) {
+template <typename T> BinNodePosi(T) randomPosiInBinTree(BinNodePosi(T) root) {
     if (! HasChild(* root)) return root;
     if (! HasLChild(* root))
         return dice(6) ? randomPosiInBinTree(root->rc) : root;
@@ -32,7 +32,7 @@ template<typename T> BinNodePosi(T) randomPosiInBinTree(BinNodePosi(T) root) {
     randomPosiInBinTree(root->rc) ;
 }
 
-template<typename T> void testBinTree(int h) { //测试二叉树
+template <typename T> void testBinTree(int h) { //测试二叉树
     printf("\n==== Test %2d. Generate a binTree of height <= %d \n", testID++, h);
     BinTree<T> bt; print(bt);
     bt.insertAsRoot(dice((T) h * h * h)); print(bt);
