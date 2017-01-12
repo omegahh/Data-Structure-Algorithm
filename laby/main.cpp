@@ -11,8 +11,8 @@
 #include "cell.h" //迷宫格点类
 
 int labySize;
-Cell* startCell;
-Cell* goalCell;
+Cell * startCell;
+Cell * goalCell;
 
 #include "neighbor.h"
 #include "advance.h"
@@ -26,12 +26,10 @@ Cell* goalCell;
 /******************************************************************************************
  * 迷宫寻径
  ******************************************************************************************/
-int main ( int argc, char* argv[] ) {
-    srand ( ( unsigned int ) time ( NULL ) ); //设置随机种子
-    ( 1 < argc ) ? readLaby ( argv[1] ) : randLaby(); //使用指定迷宫文件，或随机生成
-    labyrinth ( laby, startCell, goalCell ) ? //启动算法
-    printf ( "\nRoute found\a\n" ) :
-    printf ( "\nNo route found\a\n" );
-    getchar();
+int main(int argc, char * argv[]) {
+    srand((unsigned int) time(NULL)); //设置随机种子
+    (1 < argc) ? readLaby(argv[1]) : randLaby(); //使用指定迷宫文件，或随机生成
+    //启动算法
+    labyrinth(laby, startCell, goalCell) ? printf("\nRoute found\n") : printf("\nNo route found\n");
     return 0;
 }

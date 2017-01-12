@@ -18,12 +18,10 @@ void simulate(int nWin, int servTime) { //按指定窗口数、服务总时间�
         }
         for (int i = 0; i < nWin; i++) //分别检查
             if (!windows[i].empty()) //各非空队列
-                if (-- windows[i].front().time <= 0) //队首顾客的服务时长减少一个单位
+                if (--windows[i].front().time <= 0) //队首顾客的服务时长减少一个单位
                     windows[i].dequeue(); //服务完毕的顾客出列，由后继顾客接替
         displayProgress(windows, nWin, now); //显示当前各（窗口）队列情况
-        delay > 0 ? //若命令行指定的时间间隔为正数
-        sleep(delay) : //则做相应的延迟
-        getchar(); //否则，以手动方式单步演示
+        delay > 0 ? sleep(delay) : getchar(); //若命令行指定的时间间隔为正数则做相应的延迟，否则以手动方式单步演示
     } //for
     delete [] windows; //释放所有队列（此前，~List()会自动清空队列）
 }

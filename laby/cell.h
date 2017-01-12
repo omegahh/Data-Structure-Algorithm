@@ -9,7 +9,7 @@
 #ifndef cell_h
 #define cell_h
 
-typedef enum { AVAILABLE, ROUTE, BACKTRACKED, WALL } Status; //迷宫单元状态
+typedef enum { AVAILABLE, ROUTE, TRACKED, WALL } Status; //迷宫单元状态
 //原始可用的、在当前路径上的、所有方向均尝试失败后回溯过的、不可使用的（墙）
 
 typedef enum { UNKNOWN, EAST, SOUTH, WEST, NORTH, NO_WAY } ESWN; //单元的相对邻接方向

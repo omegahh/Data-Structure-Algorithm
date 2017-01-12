@@ -22,6 +22,5 @@ void displayRow(Queen & q) { //打印当前皇后（放置于col列）所在行
 void displayProgress(Stack<Queen> & S, int nQueen) { //在棋盘上显示搜查的进展
     N = nQueen; S.traverse(displayRow);
     if (nQueen <= S.size())
-        std::cout << nSolu << " solution(s) found after " << nCheck << " check(s)\a";
-    getchar();
+        std::cout << nSolu << " solution(s) found after " << nCheck << " check(s) for " << N << " Queen(s)\n\n";
 }

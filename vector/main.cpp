@@ -33,7 +33,7 @@ void testFind(Vector<T> & V, int n) {
  * 测试：有序向量的查找（binSearch或fibSearch）
  ******************************************************************************************/
 template <typename T>
-void testSearch(Vector<T> &V) {
+void testSearch(Vector<T> & V) {
     for (int i = 0; i < V.size(); i++) {
         T e = V[i]; printf("Looking for"); print(e); printf(" in ...\n"); print(V);
         Rank r = V.search(e);
